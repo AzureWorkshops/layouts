@@ -3,7 +3,14 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-2 col-md-offset-1">
+            <?= $this->get_breadcrumb_title($page, $base_page) ?>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 col-md-offset-1">
             <!-- Navigation -->
             <?php
             $rendertree = $tree;
