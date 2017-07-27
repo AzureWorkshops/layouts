@@ -1,14 +1,12 @@
 <?php $this->layout('theme::layout/00_layout') ?>
 <?php $this->insert('theme::partials/navbar_content', ['params' => $params]); ?>
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-2 col-md-offset-1">
+        <div class="col-md-2 col-md-offset-1 breadcrumbs">
             <?= $this->get_breadcrumb_title($page, $base_page) ?>
         </div>
     </div>
-</div>
-<div class="container">
     <div class="row">
         <div class="col-md-2 col-md-offset-1">
             <!-- Navigation -->
