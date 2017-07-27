@@ -1,30 +1,50 @@
 <?php $this->layout('theme::layout/00_layout') ?>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+<?php $this->insert('theme::partials/navbar_content', ['params' => $params]); ?>
 
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            Test
+            <!-- Navigation -->
+            <?php
+            $rendertree = $tree;
+            $path = '';
+
+            if ($page['language'] !== '') {
+                $rendertree = $tree[$page['language']];
+                $path = $page['language'];
+            }
+
+            echo $this->get_navigation($rendertree, $path, isset($params['request']) ? $params['request'] : '', $base_page, $params['mode']);
+            ?>
+
+            <div class="Links">
+                <?php if (!empty($params['html']['links'])) {
+                ?>
+                    <hr/>
+                    <?php foreach ($params['html']['links'] as $name => $url) {
+                    ?>
+                        <a href="<?= $url ?>" target="_blank"><?= $name ?></a>
+                        <br />
+                    <?php
+                    } ?>
+                <?php
+                } ?>
+
+                <?php if (!empty($params['html']['twitter'])) {
+                ?>
+                    <hr/>
+                    <div class="Twitter">
+                        <?php foreach ($params['html']['twitter'] as $handle) {
+                        ?>
+                            <iframe allowtransparency="true" frameborder="0" scrolling="no" style="width:162px; height:20px;" src="https://platform.twitter.com/widgets/follow_button.html?screen_name=<?= $handle; ?>&amp;show_count=false"></iframe>
+                            <br />
+                            <br />
+                        <?php
+                        } ?>
+                    </div>
+                <?php
+                } ?>
+            </div>
         </div>
         <div class="col-md-8">
             <?= $this->section('content'); ?>
