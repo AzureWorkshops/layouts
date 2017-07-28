@@ -43,7 +43,7 @@ class CalloutParser extends AbstractBlockParser
 
         $html = new HtmlElement(
             'div',
-            ['class' => 'bs-callout bs-callout-primary'], 
+            ['class' => 'bs-callout bs-callout-primary', 'data-length' => $length], 
             $cursor->peek(-1 * $length)
         ); 
 
