@@ -6,7 +6,7 @@ use Todaymade\Daux\Tree\Root;
 
 class Processor extends \Todaymade\Daux\Processor
 {
-    public function extendCommonMarkEnvironment(Environment $environment)
+    public function extendCommonMarkEnvironment(\League\CommonMark\Environment $environment)
     {
         $environment->addBlockRenderer('League\CommonMark\Block\Element\BlockQuote', new CustomBlockQuoteRenderer());
     }
