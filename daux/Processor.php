@@ -32,11 +32,17 @@ class CalloutParser extends AbstractBlockParser
             return false;
         }
 
+        /*
         $cursor->advanceToNextNonSpaceOrTab();
         $cursor->advance();
         $cursor->advanceBySpaceOrTab();
+        */
+        
 
-        $context->addBlock(new HtmlBlock(6));
+        $block = new HtmlBlock(6);
+        $block->addLine($cursor->getLine() + 'testing');
+
+        $context->addBlock($block);
 
         return true;
     }
