@@ -37,12 +37,14 @@ class CalloutParser extends AbstractBlockParser
         $cursor->advance();
         $cursor->advanceBySpaceOrTab();
         */
+
+        $length = $cursor->advanceToEnd();
         
 
         $html = new HtmlElement(
             'div',
             ['class' => 'bs-callout bs-callout-primary'], 
-            $cursor->getLine()
+            $cursor->peek(-1 * $length);
         ); 
 
         $block = new HtmlBlock(6);
