@@ -48,6 +48,7 @@
         echo '<script src="' . $js . '"></script>';
     } ?>
 
+    <script src="<?= $base_url; ?>themes/azure/js/highlight.pack.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/bash.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/cpp.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/cs.min.js"></script>
