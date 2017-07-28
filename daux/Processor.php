@@ -15,7 +15,7 @@ class Processor extends \Todaymade\Daux\Processor
 
 class CustomBlockQuoteRenderer implements BlockRendererInterface
 {
-    public function render(League\CommonMark\Block\Element\AbstractBlock $block, League\CommonMark\ElementRendererInterface $htmlRenderer, $inTightList = false)
+    public function render(\League\CommonMark\Block\Element\AbstractBlock $block, \League\CommonMark\ElementRendererInterface $htmlRenderer, $inTightList = false)
     {
         if (!($block instanceof BlockQuote)) {
             throw new \InvalidArgumentException('Incompatible block type: ' . get_class($block));
