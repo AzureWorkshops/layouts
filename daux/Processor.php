@@ -27,7 +27,7 @@ class CalloutParser extends AbstractBlockParser
             return false;
         }
 
-        if ($cursor->advanceWhileMatches('>') != 2) {
+        if ($cursor->advanceWhileMatches('!') != 2) {
             return false;
         }
 
