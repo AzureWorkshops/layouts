@@ -39,3 +39,15 @@ h1, h2, h3, h4, h5, h6 {
     padding: 8px 0;
     font-size: .8125rem;
 }
+
+.pager {
+    margin:50px 0px;
+}
+
+li.pager-prev {
+    float:left;
+}
+
+li.pager-next {
+    float:right;
+}
