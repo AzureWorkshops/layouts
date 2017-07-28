@@ -2,6 +2,8 @@
 
 namespace Todaymade\Daux\Extension;
 
+use League\CommonMark\HtmlElement;
+use League\CommonMark\Inline\Renderer\BlockRendererInterface;
 use Todaymade\Daux\Tree\Root;
 
 class Processor extends \Todaymade\Daux\Processor
