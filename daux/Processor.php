@@ -45,7 +45,7 @@ class CalloutParser extends AbstractBlockParser
             $cursor->getLine()
         ); 
 
-        $block = new AbstractBlock();
+        $block = new HtmlBlock(6);
         $block->addLine($html->__toString());
 
         $context->addBlock($block);
