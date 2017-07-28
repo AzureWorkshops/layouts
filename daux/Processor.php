@@ -17,10 +17,12 @@ class CustomBlockQuoteRenderer implements BlockRendererInterface
 {
     public function render(\League\CommonMark\Block\Element\AbstractBlock $block, \League\CommonMark\ElementRendererInterface $htmlRenderer, $inTightList = false)
     {
+        /*
         if (!($block instanceof BlockQuote)) {
             throw new \InvalidArgumentException('Incompatible block type: ' . get_class($block));
         }
-
+        */
+        
         $filling = $htmlRenderer->renderBlocks($block->children());
         if ($filling === '') {
             return new HtmlElement('blockquote', $attrs, $htmlRenderer->getOption('inner_separator', "\n"));
