@@ -39,8 +39,14 @@ class CalloutParser extends AbstractBlockParser
         */
         
 
-        $block = new HtmlBlock(6);
-        $block->addLine($cursor->getLine() + 'testing');
+        $html = new HtmlElement(
+            'div',
+            ['class' => 'bs-callout bs-callout-primary'],
+            $htmlRenderer->getOption('inner_separator', "\n") . $cursor->getLine() . $htmlRenderer->getOption('inner_separator', "\n")
+        ); 
+
+        $block = new AbstractBlock();
+        $block->addLine($html->__toString());
 
         $context->addBlock($block);
 
