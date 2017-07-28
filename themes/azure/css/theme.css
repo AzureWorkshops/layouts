@@ -62,7 +62,6 @@ h3, h4, h5, h6 {
 .pager li>a {
     border:0px;
     background-color: #0050c5;
-    padding:9px 43px 13px 16px;
     border-radius: 0px;
     color:#fff;
     text-decoration:none;    
@@ -81,30 +80,34 @@ li.pager-next {
     float:right;
 }
 
-li.pager-next>a:after {
-    /*content: "\e00f";*/
-    content: "\f105";
-    display: inline-block;
-    font-family: FontAwesome;
-    margin-top: -1rem;
-    min-width: 16px;
-    padding-top: 3px;
-    position: absolute;
-    right: 13px;
-    top: 50%;
+.pager li.pager-prev>a {
+    padding:9px 16px 13px 43px;
 }
 
-li.pager-prev>a:after {
-    /*content: "\e00f";*/
-    content: "\f104";
+.pager li.pager-next>a {
+    padding:9px 43px 13px 16px;
+}
+
+li.pager-next>a:after,
+li.pager-prev>a:before {
     display: inline-block;
     font-family: FontAwesome;
     margin-top: -1rem;
     min-width: 16px;
     padding-top: 3px;
-    position: absolute;
-    left: 13px;
-    top: 50%;
+    position: relative;
+    top: 4px;
+    font-size:1.5rem;
+}
+
+li.pager-next>a:after {
+    content: "\f105";
+    right: 13px;
+}
+
+li.pager-prev>a:before {
+    content: "\f104";
+    right: 13px;
 }
 
 .navbar-brand {
