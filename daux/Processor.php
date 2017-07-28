@@ -3,8 +3,7 @@
 namespace Todaymade\Daux\Extension;
 
 use League\CommonMark\HtmlElement;
-use League\CommonMark\Inline\Renderer\BlockRendererInterface;
-use Todaymade\Daux\Tree\Root;
+use League\CommonMark\Block\Renderer\BlockRendererInterface;
 
 class Processor extends \Todaymade\Daux\Processor
 {
