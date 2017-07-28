@@ -17,7 +17,7 @@ class Processor extends \Todaymade\Daux\Processor
     public function extendCommonMarkEnvironment(Environment $environment)
     {
         $environment->addBlockParser(new CalloutParser());
-        $environment->addBlockRenderer('League\CommonMark\Block\Element\BlockQuote', new CustomBlockQuoteRenderer());
+        //$environment->addBlockRenderer('League\CommonMark\Block\Element\BlockQuote', new CustomBlockQuoteRenderer());
     }
 }
 
@@ -32,21 +32,14 @@ class CalloutParser extends AbstractBlockParser
             return false;
         }
 
-        /*
-        $cursor->advanceToNextNonSpaceOrTab();
-        $cursor->advance();
-        $cursor->advanceBySpaceOrTab();
-        */
-
         $cursor->advanceToNextNonSpaceOrTab();
         $pos = $cursor->getPosition();
         $length = $cursor->advanceToEnd();
 
-
         $html = new HtmlElement(
             'div',
-            ['class' => 'bs-callout bs-callout-primary', 'data-pos' => $pos, 'data-length' => $length], 
-            substr($cursor->getLine(), $pos, $length-1)
+            ['class' => 'bs-callout bs-callout-primary'], 
+            substr($cursor->getLine(), $pos, $length)
         ); 
 
         $block = new HtmlBlock(6);
@@ -62,11 +55,11 @@ class CustomBlockQuoteRenderer implements BlockRendererInterface
 {
     public function render(AbstractBlock $block, ElementRendererInterface $htmlRenderer, $inTightList = false)
     {
-        /*
+        
         if (!($block instanceof BlockQuote)) {
             throw new \InvalidArgumentException('Incompatible block type: ' . get_class($block));
         }
-        */
+        
 
         $filling = $htmlRenderer->renderBlocks($block->children());
         if ($filling === '') {
