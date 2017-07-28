@@ -3,6 +3,7 @@
 namespace Todaymade\Daux\Extension;
 
 use League\CommonMark\Block\Element\AbstractBlock;
+use League\CommonMark\Block\Element\HtmlBlock;
 use League\CommonMark\Block\Parser\AbstractBlockParser;
 use League\CommonMark\Block\Renderer\BlockRendererInterface;
 use League\CommonMark\ContextInterface;
