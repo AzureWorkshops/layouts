@@ -48,5 +48,10 @@
         echo '<script src="' . $js . '"></script>';
     } ?>
 
+    <script src="<?= $base_url; ?>themes/azure/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script src="<?= $base_url; ?>themes/azure/js/theme.js"></script>
+
 </body>
 </html>
