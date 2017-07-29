@@ -15,6 +15,10 @@ body {
     height: auto!important;
 }
 
+.navbar {
+    margin-bottom: 0px;
+}
+
 #content-wrapper {
     padding-bottom:40px;
 }
@@ -37,7 +41,7 @@ body {
 }
 
 #footer {
-    padding:20px 0px 50px 0px;
+    padding:20px 15px 50px 15px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -77,7 +81,6 @@ h3, h4, h5, h6 {
 }
 
 .breadcrumbs {
-    margin-top: 8px;
     margin-bottom: 8px;
     padding: 8px 0;
     font-size: .8125rem;
@@ -214,4 +217,48 @@ pre code {
 }
 .bs-callout-info h4 {
     color: #5bc0de;
+}
+
+.Nav {
+    margin:18px 0px 0px;
+    padding:0px;
+}
+
+.Nav__item {
+    display:block;
+}
+
+.Nav__item--active>a, .Nav__item--open>a {
+    background-color: #c5c5cb;
+}
+
+.Nav__item a {
+    display: block;
+    margin: 0;
+    padding: 6px 15px 6px 20px;
+    font-weight: 400;
+    color: #3f4657;
+    font-size: 15px;
+    text-shadow: none;
+    border-color: #e7e7e9;
+}
+
+.Nav .Nav {
+    display: none;
+    margin-left: 15px;
+}
+
+.Nav .Nav .Nav__item a {
+    margin: 0;
+    margin-left: -15px;
+    padding: 3px 30px;
+    color: #2d2d2d;
+    opacity: .7;
+}
+
+.Nav__arrow {
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    margin-left: -16px;
 }
