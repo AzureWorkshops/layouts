@@ -221,15 +221,33 @@ pre code {
 
 .Nav {
     margin:18px 0px 0px;
-    padding:0px;
+    padding: 0;
+}
+
+.Nav__arrow {
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    margin-left: -16px;
+}
+
+.Nav__arrow::before {
+    position: absolute;
+    display: block;
+    content: "";
+    margin: -0.25em 0 0 -0.4em;
+    left: 50%;
+    top: 50%;
+    width: 0.5em;
+    height: 0.5em;
+    border-right: 0.15em solid #3f4657;
+    border-top: 0.15em solid #3f4657;
+    transform: rotate(45deg);
+    transition-duration: 0.3s;
 }
 
 .Nav__item {
-    display:block;
-}
-
-.Nav__item--active>a, .Nav__item--open>a {
-    background-color: #c5c5cb;
+    display: block;
 }
 
 .Nav__item a {
@@ -243,49 +261,43 @@ pre code {
     border-color: #e7e7e9;
 }
 
+.Nav__item a:hover {
+    color: #3f4657;
+    text-shadow: none;
+    background-color: #c5c5cb;
+}
+
 .Nav .Nav {
     display: none;
     margin-left: 15px;
 }
-
+        
 .Nav .Nav .Nav__item a {
     margin: 0;
     margin-left: -15px;
     padding: 3px 30px;
     color: #2d2d2d;
-    opacity: .7;
+    opacity: 0.7;
 }
 
-.Nav__arrow {
-    display: inline-block;
-    position: relative;
-    width: 16px;
-    margin-left: -16px;
+.Nav .Nav .Nav__item a:hover {
+    opacity: 1;
 }
 
-.Nav__arrow:before {
-    position: absolute;
+.Nav .Nav .Nav__item--active a {
+    color: #3f4657;
+}
+
+.Nav__item--open > a, 
+.Nav__item--active > a {
+    background-color: #c5c5cb;
+}
+        
+.Nav__item--open > .Nav {
     display: block;
-    content: "";
-    margin: -.25em 0 0 -.4em;
-    left: 50%;
-    top: 50%;
-    width: .5em;
-    height: .5em;
-    border-right: .15em solid #3f4657;
-    border-top: .15em solid #3f4657;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    -webkit-transition-duration: .3s;
-    transition-duration: .3s;
 }
 
-.Nav__item--open>a>.Nav__arrow:before {
-    margin-left: -.25em;
-    -webkit-transform: rotate(135deg);
+.Nav__item--open > a > .Nav__arrow::before {
+    margin-left: -0.25em;
     transform: rotate(135deg);
-}
-
-.Nav__item--open>.Nav {
-    display: block;
 }
