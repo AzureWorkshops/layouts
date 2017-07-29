@@ -16,6 +16,28 @@ body {
     height: auto!important;
 }
 
+.navbar-inverse,
+#footer {
+    background-color: #0086b7;
+    border-color: #0086b7;
+}
+
+.navbar-inverse .navbar-toggle,
+#footer {
+    border-color: #286090;
+}
+
+.navbar-inverse .navbar-nav>li>a, 
+.navbar-inverse .navbar-brand,
+#footer {
+    color: #fff;
+}
+
+#footer {
+    border:1px solid #286090;
+    border-width: 1px 0px 0px 0px;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-style: normal;
     font-weight: 300;
