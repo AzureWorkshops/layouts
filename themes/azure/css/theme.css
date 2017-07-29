@@ -257,10 +257,11 @@ pre code {
     font-weight: 400;
     font-size: 15px;
     text-shadow: none;
+    color: #222;
 }
 
 .Nav__item a:hover {
-    color: #fff;
+    color: #286090;
     text-shadow: none;
     text-decoration: underline;
 }
