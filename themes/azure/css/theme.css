@@ -298,6 +298,11 @@ pre code {
     transform: rotate(135deg);
 }
 
+.has-children a:hover {
+    color:#222;
+    text-decoration: none;
+}
+
 img.inline {
     display: inline; 
     margin:0px 5px;
