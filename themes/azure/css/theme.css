@@ -279,3 +279,13 @@ pre code {
     -webkit-transition-duration: .3s;
     transition-duration: .3s;
 }
+
+.Nav__item--open>a>.Nav__arrow:before {
+    margin-left: -.25em;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.Nav__item--open>.Nav {
+    display: block;
+}
