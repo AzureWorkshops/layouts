@@ -298,7 +298,7 @@ pre code {
     transform: rotate(135deg);
 }
 
-.has-children a {
+.Nav__item.has-children a {
     color:#222;
     text-decoration: none;
 }
