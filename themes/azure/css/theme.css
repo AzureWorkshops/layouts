@@ -92,7 +92,7 @@ h3, h4, h5, h6 {
 
 .pager li>a {
     border:0px;
-    background-color: #0050c5;
+    background-color: #286090;
     border-radius: 0px;
     color:#fff;
     text-decoration:none;    
@@ -100,7 +100,7 @@ h3, h4, h5, h6 {
 
 .pager li>a:hover {
     text-decoration: underline;
-    background-color: #0050c5;    
+    background-color: #286090;    
 }
 
 li.pager-prev {
@@ -255,42 +255,31 @@ pre code {
     margin: 0;
     padding: 6px 15px 6px 20px;
     font-weight: 400;
-    color: #3f4657;
     font-size: 15px;
     text-shadow: none;
-    border-color: #e7e7e9;
 }
 
 .Nav__item a:hover {
-    color: #3f4657;
+    color: #fff;
     text-shadow: none;
-    background-color: #c5c5cb;
+    text-decoration: underline;
 }
 
 .Nav .Nav {
     display: none;
     margin-left: 15px;
+    margin-top: 0px;
 }
         
 .Nav .Nav .Nav__item a {
     margin: 0;
     margin-left: -15px;
     padding: 3px 30px;
-    color: #2d2d2d;
-    opacity: 0.7;
 }
 
-.Nav .Nav .Nav__item a:hover {
-    opacity: 1;
-}
-
-.Nav .Nav .Nav__item--active a {
-    color: #3f4657;
-}
-
-.Nav__item--open > a, 
 .Nav__item--active > a {
-    background-color: #c5c5cb;
+    background-color: #286090;
+    color:#fff;
 }
         
 .Nav__item--open > .Nav {
