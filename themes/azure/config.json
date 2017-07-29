@@ -1,6 +1,6 @@
 {
   "favicon": "",
-  "css": ["<theme_url>css/highlighter.css","<theme_url>css/theme.css"],
+  "css": ["<theme_url>css/vs.css","<theme_url>css/theme.css"],
   "js": [],
   "fonts": [],
   "variants": {
