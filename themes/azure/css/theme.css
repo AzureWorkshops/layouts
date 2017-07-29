@@ -22,7 +22,6 @@ body {
 
 #content-wrapper {
     padding-bottom:40px;
-    background-color:#fff;
 }
 
 .navbar-inverse {
@@ -282,7 +281,13 @@ pre code {
     background-color: #286090;
     color:#fff;
 }
-        
+
+.Nav__item--active > a:hover {
+    background-color: #286090;
+    color:#fff;
+    text-decoration: underline;
+}
+
 .Nav__item--open > .Nav {
     display: block;
 }
