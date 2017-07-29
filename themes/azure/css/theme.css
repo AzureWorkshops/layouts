@@ -298,7 +298,8 @@ pre code {
     transform: rotate(135deg);
 }
 
-.has-children a:hover {
+.has-children a:hover,
+.has-children a:active, {
     color:#222;
     text-decoration: none;
 }
