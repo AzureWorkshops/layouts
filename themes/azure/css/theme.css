@@ -262,3 +262,20 @@ pre code {
     width: 16px;
     margin-left: -16px;
 }
+
+.Nav__arrow:before {
+    position: absolute;
+    display: block;
+    content: "";
+    margin: -.25em 0 0 -.4em;
+    left: 50%;
+    top: 50%;
+    width: .5em;
+    height: .5em;
+    border-right: .15em solid #3f4657;
+    border-top: .15em solid #3f4657;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+}
