@@ -1,7 +1,7 @@
 <?php $this->layout('theme::layout/00_layout') ?>
 <?php $this->insert('theme::partials/navbar_content', ['params' => $params]); ?>
 
-<div class="container-fluid">
+<div id="content-wrapper" class="container-fluid">
     <div class="row">
         <div class="col-md-2 col-md-offset-1 breadcrumbs">
             <?= $this->get_breadcrumb_title($page, $base_page) ?>
