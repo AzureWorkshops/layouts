@@ -298,9 +298,9 @@ pre code {
     transform: rotate(135deg);
 }
 
-.Nav__item.has-children a {
-    color:#222;
-    text-decoration: none;
+.Nav__item.has-children a.folder {
+    color:#222 !important;
+    text-decoration: none !important;
 }
 
 img.inline {
