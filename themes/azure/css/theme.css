@@ -351,6 +351,31 @@ img.block {
     top:5px;
 }
 
+a.home-button {
+    border: 0px;
+    background-color: #286090;
+    border-radius: 0px;
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 16px 13px 16px;
+    display:inline-block;
+    margin:40px 5px;
+}
+
+a.home-button i {
+    display:inline-block;
+    margin-right:3px;
+}
+
+p.home.lead {
+    padding:20px 0px;
+    font-weight:400;
+}
+
+p.home.desc {
+    padding:0px 0px 20px 0px;
+}
+
 @media print {
     html, body { height: auto; padding-top:30px; font-size:80%; line-height: 140%; -webkit-print-color-adjust: exact; background-color: none;}
     .bs-callout, code {page-break-inside: avoid;}

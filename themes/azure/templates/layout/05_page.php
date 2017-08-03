@@ -4,7 +4,7 @@
 <div id="content-wrapper" class="container-fluid">
     <div class="row hidden-print">
         <div class="col-md-2 col-md-offset-1 breadcrumbs">
-            <?= $this->get_breadcrumb_title($page, $base_page) ?>
+            <a href="<?= $params['base_page'] . $params['index']->getUri(); ?>"><?= $params['title']; ?></a> / <?= $this->get_breadcrumb_title($page, $base_page) ?>
         </div>
     </div>
     <div class="row">

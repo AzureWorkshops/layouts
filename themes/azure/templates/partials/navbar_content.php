@@ -9,7 +9,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="<?= $params['base_page'] . $params['index']->getUri(); ?>"><?= $params['title']; ?></a>
+                        <a class="navbar-brand" href="/">Azure Workshops</a>
                     </div>
                 </div>
 
