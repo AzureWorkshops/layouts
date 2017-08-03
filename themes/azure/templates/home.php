@@ -71,3 +71,5 @@
         </div>
     </div>
 </div>
+
+<?php $this->insert('theme::partials/footer', ['params' => $params]); ?>
