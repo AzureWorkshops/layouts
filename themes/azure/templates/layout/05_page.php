@@ -37,7 +37,7 @@
 
                 <div class="pdf-link">
                     <hr />
-                    <a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <span>Download PDF</span></a>
+                    <a href="[pdf_link]"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <span>Download PDF</span></a>
                 </div>
 
                 <?php if (!empty($params['html']['twitter'])) {
