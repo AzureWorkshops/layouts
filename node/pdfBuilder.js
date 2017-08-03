@@ -29,7 +29,6 @@ function pdfBuilder() {
                     phantomArgs: [
                         '--ignore-ssl-errors=yes'
                     ],
-                    //base: 'file:///mnt/c/projects/temp-findreplace/static/',
                     border: {
                         top: '.5in',
                         right: '.5in',
@@ -41,7 +40,7 @@ function pdfBuilder() {
                 let html = fs.readFileSync(file).toString()
                     .replace(/(src|(?:[^a]) href)(="|=')(\.*\/?(\w))([^'"]*)("|')/g, '$1$2file:///mnt/c/projects/temp-findreplace/static/$4$5$6')
                     .replace(/(src|href)(="|=')(\/\/)([^'"]*)("|')/g, '$1$2https://$4$5');
-
+console.log(html);
                 let fullPath = './tmp' + path.dirname(file).replace(__dirname + '/static', '') + '/' + path.basename(file, '.html') + '.pdf';
 
                 pdf.create(html, options).toFile(fullPath, (err, res) => {
