@@ -411,4 +411,8 @@ p.home.desc {
         content: none !important;
     }
 
+    p.home.lead {
+        font-size:80%;
+    }
+
 }

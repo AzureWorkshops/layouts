@@ -14,23 +14,25 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <hr />
-                <?php
-                    foreach ($page['entry_page'] as $key => $node) {
-                        echo '<a href="' . $node . '" class="home-button"><i class="fa fa-file-text-o" aria-hidden="true"></i> <span>' . $key . '</span></a>';
-                    }
-                    if(isset($params['html']['buttons']) && is_array($params['html']['buttons'])) {
-                        foreach ($params['html']['buttons'] as $button ) {
-                            echo '<a href="' . $button['url'] . '" class="home-button"><i class="fa ' . $button['icon'] . '" aria-hidden="true"></i> <span>' . $button['name'] . '</span></a>';
+                <div class="hidden-print">
+                    <?php
+                        foreach ($page['entry_page'] as $key => $node) {
+                            echo '<a href="' . $node . '" class="home-button"><i class="fa fa-file-text-o" aria-hidden="true"></i> <span>' . $key . '</span></a>';
                         }
-                    }
-                ?>
-                <a href="[pdf_link]" class="home-button"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <span>Download PDF</span></a>
-                <?php    
-                    if ($params['html']['repo']) {
-                        echo '<a href="https://github.com/' . $params['html']['repo'] . '" class="Button Button--secondary Button--hero">View On GitHub</a>';
-                    }
-                ?>
-                <hr />
+                        if(isset($params['html']['buttons']) && is_array($params['html']['buttons'])) {
+                            foreach ($params['html']['buttons'] as $button ) {
+                                echo '<a href="' . $button['url'] . '" class="home-button"><i class="fa ' . $button['icon'] . '" aria-hidden="true"></i> <span>' . $button['name'] . '</span></a>';
+                            }
+                        }
+                    ?>
+                    <a href="[pdf_link]" class="home-button"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <span>Download PDF</span></a>
+                    <?php    
+                        if ($params['html']['repo']) {
+                            echo '<a href="https://github.com/' . $params['html']['repo'] . '" class="Button Button--secondary Button--hero">View On GitHub</a>';
+                        }
+                    ?>
+                    <hr />
+                </div>
             </div>
         </div>
 
