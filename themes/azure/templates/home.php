@@ -20,7 +20,8 @@
                     }
                     if(isset($params['html']['buttons']) && is_array($params['html']['buttons'])) {
                         foreach ($params['html']['buttons'] as $button ) {
-                            echo '<a href="' . $button->url . '" class="home-button"><i class="fa ' . $button->icon . '" aria-hidden="true"></i> <span>' . $button->name . '</span></a>';
+                            $obj = json_decode($button);
+                            echo '<a href="' . $obj->url . '" class="home-button"><i class="fa ' . $obj->icon . '" aria-hidden="true"></i> <span>' . $obj->name . '</span></a>';
                         }
                     }
                 ?>
