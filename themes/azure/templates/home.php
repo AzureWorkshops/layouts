@@ -20,7 +20,6 @@
                     }
                     if(isset($params['html']['buttons']) && is_array($params['html']['buttons'])) {
                         foreach ($params['html']['buttons'] as $button ) {
-                            var_dump($button);
                             echo '<a href="' . $button['url'] . '" class="home-button"><i class="fa ' . $button['icon'] . '" aria-hidden="true"></i> <span>' . $button['name'] . '</span></a>';
                         }
                     }
