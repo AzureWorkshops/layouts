@@ -35,6 +35,11 @@
                 <?php
                 } ?>
 
+                <div class="pdf-link">
+                    <hr />
+                    <a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download PDF<a/>
+                </div>
+
                 <?php if (!empty($params['html']['twitter'])) {
                 ?>
                     <hr/>
