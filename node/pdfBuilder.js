@@ -83,7 +83,7 @@ function pdfBuilder() {
                 let file = files[i];
 
                 var rel = path.relative(file, __dirname + '/static/pdf') + '/' + docs.title + '.pdf';
-console.log(`file: ${file} path: ${path}`);
+console.log(`file: ${file} path: ${rel}`);
                 let options = {
                     patterns: [
                         {
