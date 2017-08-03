@@ -2,13 +2,13 @@
 <?php $this->insert('theme::partials/navbar_content', ['params' => $params]); ?>
 
 <div id="content-wrapper" class="container-fluid">
-    <div class="row">
+    <div class="row hidden-print">
         <div class="col-md-2 col-md-offset-1 breadcrumbs">
             <?= $this->get_breadcrumb_title($page, $base_page) ?>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-2 col-md-offset-1">
+        <div class="col-md-2 col-md-offset-1 hidden-print">
             <!-- Navigation -->
             <?php
             $rendertree = $tree;
@@ -53,6 +53,11 @@
         </div>
         <div class="col-md-6">
             <?= $this->section('content'); ?>
+        </div>
+        <div class="col-md-2 hidden-print">
+            <div class="article-links">
+                [article_map]
+            </div>
         </div>
     </div>
 </div>

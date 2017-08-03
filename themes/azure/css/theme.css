@@ -64,7 +64,6 @@ h1 {
 h2 {
     font-size: 1.75rem;
     margin-top: 32px;
-    font-weight: 400;
 }
 
 h3 {
@@ -74,11 +73,17 @@ h3 {
 }
 
 h4 {
+    font-size: 1.05rem;
     margin-top:28px;
 }
 
 h3, h4, h5, h6 {
     font-family: segoe-ui_semibold,Segoe UI Semibold,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
+}
+
+.date {
+    font-size: 10px; 
+    color: gray;
 }
 
 .breadcrumbs {
@@ -190,12 +195,10 @@ pre code {
     color: #777;
 }
 .bs-callout-primary {
-    /*border-left-color: #428bca;*/
-    border-left-color:#0086b7;
+    border-left-color: #428bca;
 }
 .bs-callout-primary h4 {
-    /*color: #428bca;*/
-    color:#0086b7;
+    color: #428bca;
 }
 .bs-callout-success {
     border-left-color: #5cb85c;
@@ -318,4 +321,35 @@ img.block {
     margin-bottom:10px;
     box-shadow: 2px 2px 2px #999;
     border:1px solid #ccc;
+}
+
+@media print {
+    html, body { height: auto; font-size:80%; line-height: 140%; -webkit-print-color-adjust: exact; background-color: none;}
+    .bs-callout, code {page-break-inside: avoid;}
+    pre { background-color: #f5f5f5 !important; }
+    pre code { font-size: .75rem !important; }
+
+    div.pageHeader {
+        height:100px;
+        background-color: #0086b7 !important;
+        padding:10px 20px;
+        position: relative;
+        top:-50px;
+    }
+
+    div.pageHeader h1,
+    div.pageHeader .date {
+        color:#fff !important;
+    }
+    div.pageHeader .date { font-size:80%; }
+    h2 { font-weight: 300; margin: 20px 0 5px 0; font-size:180%; }
+    h3, h4 { font-weight: 600; margin: 10px 0 5px 0; font-size:100%;}
+
+    a {
+        color: #337ab7 !important;
+    }
+
+    a[href]:after {
+        content: none !important;
+    }
 }

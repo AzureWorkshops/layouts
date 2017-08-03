@@ -1,11 +1,11 @@
 <?php $this->layout('theme::layout/05_page') ?>
 <article class="Page">
-
-    <h1><?= $page['title'] ?></h1>
-    <?php if ($params['html']['date_modified']) { ?>
-        <div style="font-size: 10px; color: gray;"> <?= date("l, F j, Y g:i A", $page['modified_time']); ?></div>
-    <?php } ?>
-
+    <div class="pageHeader">
+        <h1><?= $page['title'] ?></h1>
+        <?php if ($params['html']['date_modified']) { ?>
+            <div class="date"> <?= date("l, F j, Y g:i A", $page['modified_time']); ?></div>
+        <?php } ?>
+    </div>
     <div class="copy">
         <?= $page['content']; ?>
     </div>
@@ -15,7 +15,7 @@
     $has_option = array_key_exists('jump_buttons', $params['html']);
     if ($buttons && (($has_option && $params['html']['jump_buttons']) || !$has_option)) {
     ?>
-        <nav>
+        <nav class="hidden-print">
             <ul class="pager">
                 <?php if (!empty($page['prev'])) {
                 ?>
