@@ -21,6 +21,7 @@ function articleMap() {
         }
 
         find.eachfile(/\.html$/, __dirname + '/static', (file) => {
+            matches = [];
 
             let replacer = new Replacer(h4Options);
             let contents = fs.readFileSync(file).toString();
