@@ -1,23 +1,10 @@
 <?php $this->layout('theme::layout/00_layout') ?>
+<?php $this->insert('theme::partials/navbar_content', ['params' => $params]); ?>
 
-<?php $this->start('classes') ?>homepage<?php $this->stop() ?>
-
-<div class="Navbar hidden-print">
+<div id="content-wrapper" class="container-fluid">
     <div class="container">
-        <?php $this->insert('theme::partials/navbar_content', ['params' => $params]); ?>
-    </div>
-</div>
-
-<div class="Homepage">
-    <div class="HomepageTitle container">
         <?php if ($params['tagline']) {
-    echo '<h2>' . $params['tagline'] . '</h2>';
-} ?>
-    </div>
-
-    <div class="HomepageImage container">
-        <?php if ($params['image']) {
-    echo '<img class="homepage-image img-responsive" src="' . $params['image'] . '" alt="' . $params['title'] . '">';
+    echo '<h1>' . $params['tagline'] . '</h1>';
 } ?>
     </div>
 
