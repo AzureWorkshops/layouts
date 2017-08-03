@@ -16,4 +16,19 @@ $(function () {
     $('.Collapsible__trigger').click(function () {
         $('.Collapsible__content').slideToggle();
     });
+
+    var beforePrint = function() {
+        $('#content-wrapper').height(0);
+    };
+
+    if (window.matchMedia) {
+        var mediaQueryList = window.matchMedia('print');
+        mediaQueryList.addListener(function(mql) {
+            if (mql.matches) {
+                beforePrint();
+            } 
+        });
+    }
+
+    window.onbeforeprint = beforePrint;
 });
