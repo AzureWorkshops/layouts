@@ -322,6 +322,20 @@ img.block {
     border:1px solid #ccc;
 }
 
+.pdf-link a {
+    display:inline-block;
+    margin-left:3px;
+    text-decoration: none;
+}
+
+.pdf-link a i {
+    margin-right:1px;
+}
+
+.pdf-link a:hover span {
+    text-decoration: underline;
+}
+
 @media print {
     html, body { height: auto; font-size:80%; line-height: 140%; -webkit-print-color-adjust: exact; background-color: none;}
     .bs-callout, code {page-break-inside: avoid;}
