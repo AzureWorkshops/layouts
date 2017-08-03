@@ -88,7 +88,7 @@ function pdfBuilder() {
                     patterns: [
                         {
                             match: /\[pdf_link\]/g,
-                            replacement: `<a href="${rel}">Download PDF</a>`
+                            replacement: rel
                         }
                     ]
                 }
