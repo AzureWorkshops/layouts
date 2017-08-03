@@ -336,8 +336,19 @@ img.block {
     text-decoration: underline;
 }
 
+.article-links {
+    font-size: .875rem;
+    padding-top:23px;
+}
+
+.article-links ol {
+    list-style-type: none;
+    padding-left:0px;
+    line-height: 1.7;
+}
+
 @media print {
-    html, body { height: auto; padding-top:20px; font-size:80%; line-height: 140%; -webkit-print-color-adjust: exact; background-color: none;}
+    html, body { height: auto; padding-top:30px; font-size:80%; line-height: 140%; -webkit-print-color-adjust: exact; background-color: none;}
     .bs-callout, code {page-break-inside: avoid;}
     pre { background-color: #f5f5f5 !important; }
     pre code { font-size: .75rem !important; line-height:14px;}
