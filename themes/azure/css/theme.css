@@ -347,6 +347,10 @@ img.block {
     line-height: 1.7;
 }
 
+.affix {
+    top:5px;
+}
+
 @media print {
     html, body { height: auto; padding-top:30px; font-size:80%; line-height: 140%; -webkit-print-color-adjust: exact; background-color: none;}
     .bs-callout, code {page-break-inside: avoid;}
