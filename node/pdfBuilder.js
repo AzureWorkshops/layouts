@@ -117,6 +117,8 @@ function pdfBuilder() {
                             
                             completed++;
                             console.log(`write here: ${completed}...`);
+
+                            if (completed == files.length) cb();
                         });
                     });
                 } else {
