@@ -83,7 +83,7 @@ function pdfBuilder() {
                 for (var i = 0; i < files.length; i++) {
 console.log('./tmp' + path.dirname(files[i]));
 console.log(path.basename(files[i], '.md'));
-                    files[i] = './tmp' + path.dirname(files[i]).replace(__dirname + '/docs', '').replace(/(\d+)?_(.+)$/, '$2') + '/' + path.basename(files[i], '.md').replace(/^(\d+)?_(.+)$/, '$2') + '.pdf';
+                    files[i] = './tmp' + path.dirname(files[i]).replace(__dirname + '/docs', '').replace(/\/(\d+)?_([\w\d-])/, '/$2') + '/' + path.basename(files[i], '.md').replace(/^(\d+)?_(.+)$/, '$2') + '.pdf';
 
                     console.log('pdf: ' + files[i]);
                 }
