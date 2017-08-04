@@ -8,12 +8,18 @@ let fs = require('fs'),
     docs = require('./docs/config.json');
 
 function pdfBuilder() {
+    this.complete = false;
+
     this.build = function () {
         async.series([
             (cb) => { convert(cb) },
             (cb) => { combine(cb) },
             (cb) => { addLink(cb) }
-        ]);
+        ], (err) => {
+            if (err) { console.error(err); }
+
+            this.complete = true;
+        });
     }
 
     function convert(cb) {
