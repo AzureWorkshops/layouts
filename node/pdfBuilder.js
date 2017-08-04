@@ -50,9 +50,9 @@ function pdfBuilder() {
                     }
 
                     let html = fs.readFileSync(file).toString()
-                        .replace(/(src|(?:[^a]) href)(="|=')((?!(https)|(http))\.*\/?(\w))([^'"]*)("|')/g, `$1$2file://${__dirname}/static/$6$7$8`)
+                        .replace(/(src|(?:[^a]) href)(="|=')((?!(https)|(http))(\.*\/?)*(\w))([^'"]*)("|')/g, `$1$2file://${__dirname}/static/$7$8$9`)
                         .replace(/(src|href)(="|=')(\/\/)([^'"]*)("|')/g, '$1$2https://$4$5');
-console.log(html);
+
                     let fullPath = './tmp' + path.dirname(file).replace(__dirname + '/static', '') + '/' + path.basename(file, '.html') + '.pdf';
 
                     pdf.create(html, options).toFile(fullPath, (err, res) => {
