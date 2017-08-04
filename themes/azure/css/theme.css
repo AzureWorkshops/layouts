@@ -311,14 +311,12 @@ pre code {
 img.inline {
     display: inline; 
     margin:0px 5px;
-    box-shadow: 2px 2px 2px #999;
     border:1px solid #ccc;
 }
 
 img.block {
     margin-top:10px;
     margin-bottom:10px;
-    box-shadow: 2px 2px 2px #999;
     border:1px solid #ccc;
 }
 
@@ -445,5 +443,9 @@ div.home.row {
 
     hr {
         border-top: 1px solid #ccc !important;
+    }
+
+    img.inline {
+        width:90%;
     }
 }
