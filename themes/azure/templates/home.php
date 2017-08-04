@@ -8,6 +8,9 @@
                 <?php if ($params['title']) {
                     echo '<h1 class="home">' . $params['title'] . '</h1>';
                 } ?>
+                <?php if ($params['html']['date_modified']) { ?>
+                    <div class="home date"> <?= date("l, F j, Y g:i A", $page['modified_time']); ?></div>
+                <?php } ?>
             </div>
         </div>
 

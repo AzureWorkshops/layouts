@@ -376,6 +376,10 @@ p.home.desc {
     padding:0px 0px 20px 0px;
 }
 
+div.home.date {
+    display:none;
+}
+
 @media print {
     html, body { height: auto; padding-top:30px; font-size:80%; line-height: 140%; -webkit-print-color-adjust: exact; background-color: none;}
     .bs-callout, code {page-break-inside: avoid;}
@@ -398,7 +402,7 @@ p.home.desc {
     div.pageHeader .date {
         color:#fff !important;
     }
-    div.pageHeader .date { font-size:80%; }
+    div.pageHeader .date { display:none; }
     h2 { font-weight: 300; margin: 20px 0 5px 0; font-size:180%; }
     h3 { font-weight: 600; margin: 20px 0 5px 0; font-size:120%;}
     h4 { font-weight: 600; margin: 14px 0 5px 0; font-size:100%;}
@@ -413,6 +417,11 @@ p.home.desc {
 
     h1.home {
         color:#0086b7 !important;
+    }
+
+    div.home.date {
+        display:block;
+        color:gray !important;
     }
 
     p.home.lead {
