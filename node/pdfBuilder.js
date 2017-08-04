@@ -18,11 +18,13 @@ function pdfBuilder() {
         ], (err) => {
             if (err) { console.error(err); }
 
+            console.log('Done.');
             this.complete = true;
         });
     }
 
     function convert(cb) {
+        console.log('Converting HTML to PDFs...');
         find.file(/\.html$/, __dirname + '/static', (files) => {
             let completed = 0;
 
@@ -65,6 +67,7 @@ function pdfBuilder() {
     }
 
     function combine(cb) {
+        console.log('Combining PDFs...');
         find.file(/\.md$/, __dirname + '/docs', (files) => {
 
             files.sort(customSort);
@@ -81,7 +84,7 @@ function pdfBuilder() {
     }
 
     function addLink(cb) {
-
+        console.log('Adding link to PDF...');
         find.file(/\.html$/, __dirname + '/static', (files) => {
             let completed = 0;
 
