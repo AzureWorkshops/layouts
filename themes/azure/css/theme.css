@@ -424,7 +424,7 @@ div.home.row {
     }
     
     div.home.row {
-        padding-top:0px;
+        padding-top:1000px;
     }
 
     div.home.date {
@@ -436,6 +436,10 @@ div.home.row {
     p.home.lead {
         font-size:14px;
         page-break-after:always !important;
+        padding-top: 50px;
     }
 
+    p.home.desc {
+        padding-top:50px;
+    }
 }
