@@ -411,8 +411,12 @@ p.home.desc {
         content: none !important;
     }
 
+    h1.home {
+        color:#0086b7 !important;
+    }
+
     p.home.lead {
-        font-size:18px;
+        font-size:16px;
     }
 
 }

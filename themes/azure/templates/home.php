@@ -6,7 +6,7 @@
         <div class="row" style="padding-top:50px;">
             <div class="col-md-12">
                 <?php if ($params['title']) {
-                    echo '<h1>' . $params['title'] . '</h1>';
+                    echo '<h1 class="home">' . $params['title'] . '</h1>';
                 } ?>
             </div>
         </div>
