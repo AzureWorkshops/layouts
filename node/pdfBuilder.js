@@ -81,6 +81,7 @@ function pdfBuilder() {
                 files.sort(customSort);
 
                 for (var i = 0; i < files.length; i++) {
+console.log(files[i]);
                     files[i] = './tmp' + path.dirname(files[i]).replace(__dirname + '/docs', '').replace(/(\d+)?_(.+)$/, '$2') + '/' + path.basename(files[i], '.md').replace(/^(\d+)?_(.+)$/, '$2') + '.pdf';
 
                     console.log('pdf: ' + files[i]);
