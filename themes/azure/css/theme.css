@@ -421,11 +421,12 @@ div.home.date {
 
     div.home.date {
         display:block;
+        font-size:85%;
         color:gray !important;
     }
 
     p.home.lead {
-        font-size:16px;
+        font-size:14px;
     }
 
 }
