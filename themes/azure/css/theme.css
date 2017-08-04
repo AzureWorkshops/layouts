@@ -380,6 +380,10 @@ div.home.date {
     display:none;
 }
 
+div.home.row {
+     padding-top:50px;
+}
+
 @media print {
     html, body { height: auto; padding-top:30px; font-size:80%; line-height: 140%; -webkit-print-color-adjust: exact; background-color: none;}
     .bs-callout, code {page-break-inside: avoid;}
@@ -389,7 +393,7 @@ div.home.date {
     div.pageHeader {
         min-height:100px;
         background-color: #0086b7 !important;
-        padding:10px 20px 30px 20px;
+        padding:10px 20px 20px 20px;
         position: relative;
         top:-50px;
     }
@@ -418,6 +422,10 @@ div.home.date {
     h1.home {
         color:#0086b7 !important;
     }
+    
+    div.home.row {
+        padding-top:0px;
+    }
 
     div.home.date {
         display:block;
@@ -427,6 +435,7 @@ div.home.date {
 
     p.home.lead {
         font-size:14px;
+        page-break-after:always !important;
     }
 
 }

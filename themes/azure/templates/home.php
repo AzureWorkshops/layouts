@@ -3,7 +3,7 @@
 
 <div id="content-wrapper" class="container-fluid">
     <div class="container">
-        <div class="row" style="padding-top:50px;">
+        <div class="home row">
             <div class="col-md-12">
                 <?php if ($params['title']) {
                     echo '<h1 class="home">' . $params['title'] . '</h1>';
