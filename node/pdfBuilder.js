@@ -56,7 +56,6 @@ function pdfBuilder() {
                     console.log(res);
 
                     completed++;
-                    console.log(`convert: ${files.length} : ${completed}...`);
                     if (completed == files.length) cb();
                 });
             }
@@ -115,12 +114,14 @@ function pdfBuilder() {
                                 console.error(error);
                                 process.exit(1);
                             }
-
+                            
                             completed++;
+                            console.log(`write here: ${completed}...`);
                         });
                     });
                 } else {
                     completed++;
+                    console.log(`else here: ${completed}...`);
                 }
 
                 console.log(`convert: ${files.length} : ${completed}...`);
