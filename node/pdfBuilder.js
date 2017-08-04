@@ -56,6 +56,7 @@ function pdfBuilder() {
                     console.log(res);
 
                     completed++;
+                    console.log(`convert: ${files.length} : ${completed}...`);
                     if (completed == files.length) cb();
                 });
             }
@@ -122,6 +123,7 @@ function pdfBuilder() {
                     completed++;
                 }
 
+                console.log(`convert: ${files.length} : ${completed}...`);
                 if (completed == files.length) cb();
             }
         });
