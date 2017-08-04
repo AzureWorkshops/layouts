@@ -446,6 +446,6 @@ div.home.row {
     }
 
     img.inline {
-        width:90%;
+        zoom:90%;
     }
 }
