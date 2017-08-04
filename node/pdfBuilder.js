@@ -25,7 +25,9 @@ function pdfBuilder() {
 
     function convert(cb) {
         console.log('Converting HTML to PDFs...');
-        find.file(/^Overview\.html$/, __dirname + '/static', (files) => {
+        find.file(/Overview\.html$/, __dirname + '/static', (files) => {
+            if (files.length == 0) cb();
+            
             let completed = 0;
 
             for (var i = 0; i < files.length; i++) {
@@ -69,6 +71,7 @@ console.log(html);
     function combine(cb) {
         console.log('Combining PDFs...');
         find.file(/\.md$/, __dirname + '/docs', (files) => {
+            if (files.length == 0) cb();
 
             files.sort(customSort);
 
@@ -86,6 +89,8 @@ console.log(html);
     function addLink(cb) {
         console.log('Adding link to PDFs...');
         find.file(/\.html$/, __dirname + '/static', (files) => {
+            if (files.length == 0) cb();
+
             let completed = 0;
 
             for (var i = 0; i < files.length; i++) {
