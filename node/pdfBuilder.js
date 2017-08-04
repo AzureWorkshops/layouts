@@ -38,7 +38,7 @@ function pdfBuilder() {
                 }
 
                 let html = fs.readFileSync(file).toString()
-                    .replace(/(src|(?:[^a]) href)(="|=')(\.*\/?(\w))([^'"]*)("|')/g, `$1$2file://${__dirname}/static/$4$5$6`)
+                    .replace(/(src|(?:[^a]) href)(="|=')((?!(https)|(http))\.*\/?(\w))([^'"]*)("|')/g, `$1$2file://${__dirname}/static/$4$5$6`)
                     .replace(/(src|href)(="|=')(\/\/)([^'"]*)("|')/g, '$1$2https://$4$5');
 
                 let fullPath = './tmp' + path.dirname(file).replace(__dirname + '/static', '') + '/' + path.basename(file, '.html') + '.pdf';
