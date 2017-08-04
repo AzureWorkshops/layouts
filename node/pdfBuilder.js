@@ -25,7 +25,7 @@ function pdfBuilder() {
 
     function convert(cb) {
         console.log('Converting HTML to PDFs...');
-        find.file(/\.html$/, __dirname + '/static', (files) => {
+        find.file(/^Overview\.html$/, __dirname + '/static', (files) => {
             let completed = 0;
 
             for (var i = 0; i < files.length; i++) {
