@@ -84,7 +84,7 @@ function pdfBuilder() {
     }
 
     function addLink(cb) {
-        console.log('Adding link to PDF...');
+        console.log('Adding link to PDFs...');
         find.file(/\.html$/, __dirname + '/static', (files) => {
             let completed = 0;
 
@@ -116,17 +116,13 @@ function pdfBuilder() {
                             }
                             
                             completed++;
-                            console.log(`write here: ${completed}...`);
-
                             if (completed == files.length) cb();
                         });
                     });
                 } else {
                     completed++;
-                    console.log(`else here: ${completed}...`);
                 }
 
-                console.log(`convert: ${files.length} : ${completed}...`);
                 if (completed == files.length) cb();
             }
         });
