@@ -442,4 +442,8 @@ div.home.row {
     p.home.desc {
         padding-top:50px;
     }
+
+    hr {
+        border-top: 1px solid #ccc !important;
+    }
 }
